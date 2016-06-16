@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+ Intapoleta
+
+ Simple tutorial to show animation interpolation in Android
+
+ Copyright (C) 2016 Kairu Joshua Wambugu
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see http://www.gnu.org/licenses/.
+
+-->
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:paddingLeft="@dimen/layout_padding"
+
+    android:paddingTop="@dimen/layout_padding"
+
+    android:paddingRight="@dimen/layout_padding"
+
+    android:paddingBottom="@dimen/layout_padding"
+
+    tools:context=".MainActivity"
+
+    >
+
+    <!-- LinearLayout to hold the spinners -->
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+
+        android:id="@+id/am_ll_spinners"
+
+        >
+
+        <!-- Spinner for interpolators -->
+
+        <Spinner
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="@dimen/spinner_height"
+
+            android:entries="@array/interpolators"
+
+            android:id="@+id/am_s_interpolators"
+
+            android:layout_marginBottom="@dimen/space_between_content_areas"
+
+            />
+
+        <!-- Spinner for durations -->
+
+        <Spinner
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="@dimen/spinner_height"
+
+            android:entries="@array/durations"
+
+            android:id="@+id/am_s_durations"
+
+            android:layout_marginBottom="@dimen/space_between_content_areas"
+
+            />
+
+    </LinearLayout>
+
+    <!-- View to be the divider -->
+
+    <View
+
+        android:layout_width="match_parent"
+
+        android:layout_height="1dp"
+
+        android:background="@android:color/holo_blue_bright"
+
+        android:id="@+id/am_v_divider"
+
+        android:layout_below="@id/am_ll_spinners"
+
+        />
+
+    <!-- TextView to be animated -->
+
+    <TextView
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:text="@string/hello_other_world"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
+        android:textColor="@color/black"
+
+        android:layout_centerVertical="true"
+
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/am_tv"
+
+        />
+
+</RelativeLayout>
